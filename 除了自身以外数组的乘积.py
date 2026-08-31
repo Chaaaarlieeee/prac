@@ -3,9 +3,11 @@ class Solution:
         answer = [1] * len(nums)
         left=1
         l=0
-        for i in range(len(nums)):
-            answer[i]=left
-            left*=nums[i]
+        while l<len(nums):
+            answer[l]=left
+            left*=nums[l]
+            l+=1
+            
         right=1
         r=len(nums)-1
         while r>-1:
