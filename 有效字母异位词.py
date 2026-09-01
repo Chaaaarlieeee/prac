@@ -1,3 +1,4 @@
+from collections import Counter
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s)!=len(t):
@@ -19,3 +20,10 @@ class Solution:
     
 a=Solution()
 a.isAnagram(s = "anagram", t = "nagaram")
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s)==sorted(t)
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s)== Counter(t)
